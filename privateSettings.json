@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "rich-mountain-276311",
+    "private_key_id": "42d7b2ebfd19694a2a384d5bdc8aaa0a1cacf449",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDCwkxVSHHb0JUm\nQq7EQp+VyLotQq4B9ottKpr+Hz+kwgJ62TCYMCmJjud/JufvMGwIF47/uYKzCOhb\nqpKd67Tsy3qDRYKVYVoYr8iYWflaLieHjNh6Ozpe3OjaEm775079qI8HYHIYYcV0\nVlRrswwXBiZx0M6vSbZxqSIbEtPjOA+u4plMEvyrKTY1mJB+udC3joM1wOmnVjT8\n20Dkch+YSy3PZd6Drv+3WJZl1ZPHMUslsdSuS15S54Y8fVrbe5BIzVD26vA91N3y\nGS7KfAUZAcmVoy4h8MNRLm01RGWCd1cpB9dQvSz+i8CHddg2sB1jVEZugqDcdUty\nQlwQ2+rhAgMBAAECggEABVupE/ORRlXftJTDEB0xHMLP9GzQMregsFkquHENpC++\nN7j/8D/q9KDc14+vc9ImNrbHNVvaL6jAE72GmReh+53BehkQdaGfA+zaHO7kwEli\nxwTl877rZS64rT8ylHWRo8LeZHqPyQHvl7rESc48N+nwZtMyzHm/rjLUAGCtOaQF\n3syrrRbrgXC05Rpplu3UmG0wtf5HpPpmilXScxHBKs/kdKDDwQGS3dGi0ibcjt7E\nOE7NWkCbdKvdMSZZkvgPWY9ax5YRkr+4jQ5kfN6mfwliOKv1lZmOrQGq90yH8Jb9\nlTxHw8HqLBOvkGyi5oV+Qfz3YNJH+SVUQ0oGf/WtkQKBgQDyMLpcxPQBPP5MASbo\n2P/vhegg2ZyQaxrRwtQTGZpZjNhV+NDv8/E0Qp9XYuWno19ijn2bYCCM/SLid0rw\n1JwXglMgXBkBzYi5LMih47IypeigPjRP08RVNOXq+xRktK1FX3WucpJzlPKQOdWI\nE6yaoq9VzEUdwzxr85P44agBRQKBgQDN3TXxBooYxSy2jJLH+Lpfhk3EBRsrw2VX\nerjVWcsachiAlc4ZDDdaPNoYkEIIAdbdgVXH2eMDs0qNMVAg2+c8V+mZrrg1mW52\nKP8djC6UckNvwi46hD/8KHH47pSjE4Oevzmz3clVB6YEsrEFbhF06VzCYGhHZ2nM\nzpQCEYCm7QKBgCiEZmkmufuLDLACcVP7GbYknNUCEuNGR9JX2croOZ5JpdecLLg4\nA15O1wFzliAZgNeoJvNbfZaYssFYW702lHaKYwXC4pwemoUALQCIa0N15hkIzw+b\nyfjHRL+vCZZfc61rbvCkUkPr4ziltEdzoyirltGvvtBf3TfiJBs7BTRRAoGAfOGQ\nc2IQK+6QrTyhXgWYqZIDYsHmNaoWs/aSYXpTJvvHuVkm6TLr8SWw9+2q4Mic20o2\nC0I14GzG8NfVT9mWcJiz8LJ4tKsawzsjZ30+VHbsScN137GSTxkJ6oRwTmzsD0TZ\ncC8+jwJQx9DOagjXNiDKUG/DUm19VOyMBKUxchECgYBKjpe3FiaMhKHBYzNZDjRz\ndJ4xB34WPcIeXMxTRRHmESvImje6xCtUutlvDrltla0/RbvU8uW6RFxZjqMnYz0u\nE5gzkcSzzrCQCb26hIvpLvzjlrBdRR+2Np1MEyb7+hHRkWaZmGIyWsSXJekj8WYH\nZTbcgDcwVQt2U1gb96pWEQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "hw5-sheets@rich-mountain-276311.iam.gserviceaccount.com",
+    "client_id": "102559529948468746450",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hw5-sheets%40rich-mountain-276311.iam.gserviceaccount.com"
+  }
