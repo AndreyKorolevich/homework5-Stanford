@@ -31,10 +31,18 @@ app.get('/api', onGet);
 
 async function onPost(req, res) {
   const messageBody = req.body;
-
-  // TODO(you): Implement onPost.
-
-  res.json( { status: 'unimplemented'} );
+  const table = await sheet.getRows();
+  const firstRow = table.rows[0]
+  let newRow = [];
+  for(const row in  messageBody){
+    for (let i = 0; i < firstRow.length; i++) {
+      if(row === firstRow[i]) {
+        newRow.push( messageBody[row])
+      }  
+    } 
+  }
+  const result = await sheet.appendRow(newRow);
+  res.json( result );
 }
 app.post('/api', jsonParser, onPost);
 
