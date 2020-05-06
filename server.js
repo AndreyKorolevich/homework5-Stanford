@@ -18,9 +18,9 @@ async function onGet(req, res) {
   const rows = result.rows;
   let arrResult = [];
 
-  for(let i = 1; i < rows.length; i++){
+  for (let i = 1; i < rows.length; i++) {
     const user = {};
-    for(let j = 0; j < rows[0].length; j++){
+    for (let j = 0; j < rows[0].length; j++) {
       user[rows[0][j]] = rows[i][j]
     }
     arrResult.push(user);
@@ -34,44 +34,67 @@ async function onPost(req, res) {
   const table = await sheet.getRows();
   const firstRow = table.rows[0]
   let newRow = [];
-  for(const row in  messageBody){
+  for (const row in messageBody) {
     for (let i = 0; i < firstRow.length; i++) {
-      if(row === firstRow[i]) {
-        newRow.push( messageBody[row])
-      }  
-    } 
+      if (row === firstRow[i]) {
+        newRow.push(messageBody[row])
+      }
+    }
   }
   const result = await sheet.appendRow(newRow);
-  res.json( result );
+  res.json(result);
 }
 app.post('/api', jsonParser, onPost);
 
 async function onPatch(req, res) {
-  const column  = req.params.column;
-  const value  = req.params.value;
+  const column = req.params.column;
+  const value = req.params.value;
   const messageBody = req.body;
 
-  // TODO(you): Implement onPatch.
+  const table = await sheet.getRows();
+  const rows = table.rows;
 
-  res.json( { status: 'unimplemented'} );
+  let numberRow = null;
+  for (let i = 1; i < rows.length; i++) {
+    if (rows[i].indexOf(value) !== -1) {
+      numberRow = i;
+      break;
+    }
+  }
+  if (numberRow === null) {
+    res.json({
+      "response": "success"
+    });
+  }
+
+  const firstRow = table.rows[0]
+  let newRow = [];
+  for (const row in messageBody) {
+    newRow[firstRow.indexOf(row)] = messageBody[row];
+  }
+
+  const result = await sheet.setRow(numberRow, newRow)
+  res.json(result);
 }
 app.patch('/api/:column/:value', jsonParser, onPatch);
 
 async function onDelete(req, res) {
   const result = await sheet.getRows();
   const rows = result.rows;
-  const value  = req.params.value;
+  const value = req.params.value;
 
-  for(let i = 1; i < rows.length; i++){
-   if(rows[i].indexOf(value) !== -1) {
-    const elem = await sheet.deleteRow(i);
-    res.json(elem);
-    return
-   }
+  for (let i = 1; i < rows.length; i++) {
+    if (rows[i].indexOf(value) !== -1) {
+      const elem = await sheet.deleteRow(i);
+      res.json(elem);
+      return
+    }
   }
-  res.json({"response": "success"});
+  res.json({
+    "response": "success"
+  });
 }
-app.delete('/api/:column/:value',  onDelete);
+app.delete('/api/:column/:value', onDelete);
 
 
 // Please don't change this; this is needed to deploy on Heroku.
